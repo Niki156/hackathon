@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<configuration packages="com.epam.ta.reportportal.log4j.appender" status="WARN">
+    <Appenders>
+        <Console name="ConsoleAppender">
+            <PatternLayout>
+                <Pattern>%d [%t] %-5level %logger{36} - %msg%n%throwable</Pattern>
+            </PatternLayout>
+        </Console>
+        <File name="FileAppender" fileName="C:\\Users\\Leelakrishna_Boddapa\\Desktop\\Portal\\target\\generated-resources\\logs\\mylogs.log">
+            <PatternLayout>
+              <Pattern>%d [%t] %-5level %logger{36} - %msg%n%throwable</Pattern>
+            </PatternLayout>
+        </File>
+        <ReportPortalLog4j2Appender name="ReportPortalAppender">
+            <PatternLayout>
+                <Pattern>%d [%t] %-5level %logger{36} - %msg%n%throwable</Pattern>
+            </PatternLayout>
+        </ReportPortalLog4j2Appender>
+    </Appenders>
+    <Loggers>
+        <Root level="DEBUG" >
+            <AppenderRef ref="ConsoleAppender"/>
+            <AppenderRef ref="ReportPortalAppender"/>
+            <AppenderRef ref="FileAppender"/>
+        </Root>
+        <Logger name="com.epam.reportportal.service" level="WARN" additivity="false">
+            <AppenderRef ref="ConsoleAppender"/>
+            <AppenderRef ref="ReportPortalAppender"/>
+        </Logger>
+        <Logger name="com.epam.reportportal.utils" level="WARN" additivity="false">
+            <AppenderRef ref="ConsoleAppender"/>
+            <AppenderRef ref="ReportPortalAppender"/>
+        </Logger>
+    </Loggers>
+</configuration>

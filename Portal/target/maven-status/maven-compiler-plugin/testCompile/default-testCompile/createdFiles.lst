@@ -1,0 +1,14 @@
+com\epam\programsportal\testScripts\web\smoke\CollegePageSmokeTest.class
+com\epam\programsportal\testScripts\web\regression\SpeakersPageTest.class
+com\epam\programsportal\testScripts\web\smoke\AddCollegePageSmokeTest.class
+com\epam\programsportal\testScripts\web\regression\CollegesPageTest.class
+com\epam\programsportal\testScripts\web\regression\SignUpTest.class
+com\epam\programsportal\testScripts\web\smoke\HomePageSmokeTest.class
+com\epam\programsportal\testScripts\web\regression\SignInTest.class
+com\epam\programsportal\testScripts\web\regression\HomePageTest.class
+com\epam\programsportal\testScripts\api\APITest.class
+com\epam\programsportal\testScripts\web\regression\AddCollegePageTest.class
+com\epam\programsportal\stepDefs\addCollegeTest.class
+com\epam\programsportal\testScripts\web\smoke\SignInSmokeTest.class
+com\epam\programsportal\testScripts\web\smoke\BurgerMenuSmokeTest.class
+com\epam\programsportal\testScripts\web\smoke\SignupSmokeTest.class

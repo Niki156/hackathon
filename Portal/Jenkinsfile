@@ -1,0 +1,21 @@
+pipeline{
+agent any
+stages{
+    stage('checkout'){
+        steps{
+          git branch: 'main', url: 'https://github.com/217Harsha/myPortal.git'   
+        }
+    }
+    stage('build')
+    {
+        steps{
+           build 'demo_portal'  
+        }
+    }
+    stage('sendingmail'){
+        steps{
+        emailext body: 'Please go to ${BUILD_URL} and verify the build', subject: 'Job \'${JOB_NAME}\' (${BUILD_NUMBER}) is waiting for input', to: 'leelakrishnaboddapati6420@gmail.com'
+        }    
+    }
+}
+}

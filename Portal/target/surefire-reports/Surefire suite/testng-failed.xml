@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="1" name="Failed suite [Surefire suite]" verbose="0">
+  <test thread-count="1" name="Surefire test(failed)" verbose="0">
+    <classes>
+      <class name="com.epam.programsportal.testScripts.web.smoke.SignupSmokeTest">
+        <methods>
+          <include name="checkIsSignUpPageOpened"/>
+          <include name="checkPasswordFieldDisplayed"/>
+          <include name="checkSignUpButtonEnabled"/>
+          <include name="checkEmailFieldDisplayed"/>
+          <include name="tearDown"/>
+          <include name="checkCancelLinkTextAppears"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.epam.programsportal.testScripts.web.smoke.SignupSmokeTest -->
+      <class name="com.epam.programsportal.testScripts.web.regression.CollegesPageTest">
+        <methods>
+          <include name="editCollegeInfo"/>
+          <include name="addCollege"/>
+          <include name="openAddCollegePageTest"/>
+          <include name="SearchCollege"/>
+          <include name="refresh"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.epam.programsportal.testScripts.web.regression.CollegesPageTest -->
+      <class name="com.epam.programsportal.testScripts.web.regression.SpeakersPageTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="SearchSpeakers"/>
+          <include name="refresh"/>
+          <include name="editSpeaker"/>
+          <include name="addSpeakers"/>
+        </methods>
+      </class> <!-- com.epam.programsportal.testScripts.web.regression.SpeakersPageTest -->
+      <class name="com.epam.programsportal.testScripts.web.smoke.AddCollegePageSmokeTest">
+        <methods>
+          <include name="checkCollegeGroupFieldDisplayed"/>
+          <include name="checkIsAddCollegePageOpened"/>
+          <include name="checkPtoNameFieldDisplayed"/>
+          <include name="checkCollegeCityFieldDisplayed"/>
+          <include name="checkPtoEmailFieldisplayed"/>
+          <include name="setUp"/>
+          <include name="checkCollegeNameFieldDisplayed"/>
+          <include name="checkPtoPhnoFieldDisplayed"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.epam.programsportal.testScripts.web.smoke.AddCollegePageSmokeTest -->
+      <class name="com.epam.programsportal.testScripts.web.smoke.CollegePageSmokeTest">
+        <methods>
+          <include name="checkIsAddCollegeButtonDisplayed"/>
+          <include name="setUp"/>
+          <include name="checkIsCollegePageOpened"/>
+          <include name="checkIsSearchDisplayed"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.epam.programsportal.testScripts.web.smoke.CollegePageSmokeTest -->
+      <class name="com.epam.programsportal.testScripts.api.APITest">
+        <methods>
+          <include name="setUp"/>
+          <include name="addCollege" invocation-numbers="0 1 2"/>
+        </methods>
+      </class> <!-- com.epam.programsportal.testScripts.api.APITest -->
+      <class name="com.epam.programsportal.testScripts.web.regression.SignInTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="signInTest"/>
+          <include name="tearDown"/>
+          <include name="openSignInPageTest"/>
+        </methods>
+      </class> <!-- com.epam.programsportal.testScripts.web.regression.SignInTest -->
+      <class name="com.epam.programsportal.testScripts.web.smoke.BurgerMenuSmokeTest">
+        <methods>
+          <include name="checkMDMVisible"/>
+          <include name="checkBurgerMenuopened"/>
+          <include name="checkCollegeTabVisible"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="checkSpeakerTabVisibility"/>
+          <include name="refresh"/>
+        </methods>
+      </class> <!-- com.epam.programsportal.testScripts.web.smoke.BurgerMenuSmokeTest -->
+      <class name="com.epam.programsportal.testScripts.web.smoke.SignInSmokeTest">
+        <methods>
+          <include name="checkSignInButtonEnabled"/>
+          <include name="checkPasswordFieldDisplayed"/>
+          <include name="setUp"/>
+          <include name="chekSignUpLinkTextDisplayed"/>
+          <include name="checkEmailFieldDisplayed"/>
+          <include name="checkIsSignInPageOpened"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.epam.programsportal.testScripts.web.smoke.SignInSmokeTest -->
+      <class name="com.epam.programsportal.testScripts.web.regression.AddCollegePageTest">
+        <methods>
+          <include name="checkFieldsConstraints"/>
+          <include name="refresh"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.epam.programsportal.testScripts.web.regression.AddCollegePageTest -->
+      <class name="com.epam.programsportal.testScripts.web.smoke.HomePageSmokeTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="checkIsHomePageOpened"/>
+          <include name="setUp"/>
+          <include name="checkProfiledropDownElementDisplayed"/>
+          <include name="checkBatchSearchDropDownElementDisplayed"/>
+        </methods>
+      </class> <!-- com.epam.programsportal.testScripts.web.smoke.HomePageSmokeTest -->
+      <class name="com.epam.programsportal.testScripts.web.regression.SignUpTest">
+        <methods>
+          <include name="signUpTest" invocation-numbers="0 1 2"/>
+          <include name="setUp"/>
+          <include name="openSignUpPageTest"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.epam.programsportal.testScripts.web.regression.SignUpTest -->
+      <class name="com.epam.programsportal.testScripts.web.regression.HomePageTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="openburgerMenuTest"/>
+          <include name="setUp"/>
+          <include name="openMasterDataManagementTest"/>
+          <include name="checkIsHomePageOpened"/>
+        </methods>
+      </class> <!-- com.epam.programsportal.testScripts.web.regression.HomePageTest -->
+    </classes>
+  </test> <!-- Surefire test(failed) -->
+</suite> <!-- Failed suite [Surefire suite] -->
