@@ -7,6 +7,7 @@ import com.epam.framework.utils.WaitUtilities;
 import com.epam.hackathon.pages.Youtube;
 import com.epam.hackathon.utils.HelperFunctions;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
@@ -28,14 +29,15 @@ public class SampleTest extends TestBase {
         System.out.println(list.get(index).getText());
         list.get(index).click();
         ScreenShotTaker.takeScreenShot(driver,"Uiss");
-        WaitUtilities.threadWait(10000);
+        WaitUtilities.threadWait(20000);
+        driver.navigate().back();
+        List<WebElement> list1 = youtube.getvideoTitlesWithInOneYear();
+
         String title = HelperFunctions.getVideoTitleFromApi("https://testathon-service.herokuapp.com/api/videos/title");
-        for(WebElement ele :list)
-            if(ele.getText().contains(title))
+        for(WebElement e :list1)
+            if(e.getText().contains(title))
             {
-                System.out.println(ele);
-                Actions actions = new Actions(driver);
-                actions.moveToElement(ele).click();
+                e.click();
             }
         ScreenShotTaker.takeScreenShot(driver,"apiss");
         WaitUtilities.threadWait(10000);
