@@ -5,10 +5,7 @@
        <listener class-name="com.epam.framework.listeners.TestListener" />
        <listener class-name="com.epam.reportportal.testng.ReportPortalTestNGListener" />
    </listeners>
-    <test name="regression" parallel="classes">
-        <packages>
-        </packages>
-    </test>
+
     <test name="smoke" parallel="classes">
         <packages>
             <package name="com.epam.hackathon.testScripts"></package>

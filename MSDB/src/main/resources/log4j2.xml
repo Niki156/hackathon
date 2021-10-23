@@ -6,7 +6,7 @@
                 <Pattern>%d [%t] %-5level %logger{36} - %msg%n%throwable</Pattern>
             </PatternLayout>
         </Console>
-        <File name="FileAppender" fileName="C:\\Users\\Leelakrishna_Boddapa\\Desktop\\Portal\\target\\generated-resources\\logs\\mylogs.log">
+        <File name="FileAppender" fileName="mylogs.log">
             <PatternLayout>
               <Pattern>%d [%t] %-5level %logger{36} - %msg%n%throwable</Pattern>
             </PatternLayout>

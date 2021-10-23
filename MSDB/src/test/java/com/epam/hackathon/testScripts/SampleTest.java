@@ -8,4 +8,9 @@ public class SampleTest {
     public void test(){
         System.out.println("hello");
     }
+
+    @Test()
+    public void anotherTest(){
+        System.out.println("Hackathon testing");
+    }
 }
