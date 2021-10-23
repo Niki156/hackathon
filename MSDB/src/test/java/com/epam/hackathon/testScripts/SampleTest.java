@@ -28,7 +28,7 @@ public class SampleTest extends TestBase {
         int index = HelperFunctions.getRandomEvenNumbersFromFibonaciiSeries(9);
         System.out.println(list.get(index).getText());
         list.get(index).click();
-        WaitUtilities.threadWait(10000);
+        WaitUtilities.threadWait(20000);
         ScreenShotTaker.takeScreenShot(driver,"Uiss");
         WaitUtilities.threadWait(20000);
         driver.navigate().back();
