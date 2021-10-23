@@ -13,4 +13,8 @@ public class SampleTest {
     public void anotherTest(){
         System.out.println("Hackathon");
     }
+    @Test()
+    public void another(){
+        System.out.println("Hey Leela and Nikhil");
+    }
 }
