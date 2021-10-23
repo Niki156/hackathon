@@ -21,6 +21,10 @@ public class HelperFunctions {
         return videoDetailsFromApi.getTitle();
     }
 
+    public static void main(String args[]){
+        System.out.println(getRandomEvenNumbersFromFibonaciiSeries(9));
+    }
+
 
     public static int getRandomEvenNumbersFromFibonaciiSeries(int fibonaciiSize)
     {
@@ -32,6 +36,8 @@ public class HelperFunctions {
     public static List<Integer> getEvenNumbersFromFibonacciSeries(int tillWhichValue) {
         List<Integer> list = new ArrayList<>();
         int n1=0,n2=1,n3;
+        list.add(n1);
+        list.add(n2);
         for(int i=2;i<=tillWhichValue;i++)
         {
             n3=n1+n2;

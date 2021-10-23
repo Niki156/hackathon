@@ -98,7 +98,7 @@ public class Youtube extends TestBase {
         {
             String text =  ele.getAttribute("aria-label");
             System.out.println(text);
-            if(text.contains("weeks") && text.contains("months") && text.contains("1 year ago"))
+            if(text.contains("weeks") || text.contains("months") || text.contains("1 year ago"))
             {
                 System.out.println(ele.getText());
                 temp.add(ele);
