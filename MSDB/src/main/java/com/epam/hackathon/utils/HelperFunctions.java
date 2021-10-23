@@ -15,7 +15,7 @@ public class HelperFunctions {
 
     public static  String getVideoTitleFromApi(String url){
         RequestSpecification request;
-        request = given().baseUri("https://testathon-service.herokuapp.com/api/videos/title").contentType("application/json");
+        request = given().baseUri(url).contentType("application/json");
         ResponseBody response = request.get().getBody();
         VideoDetails videoDetailsFromApi = response.as(VideoDetails.class);
         return videoDetailsFromApi.getTitle();

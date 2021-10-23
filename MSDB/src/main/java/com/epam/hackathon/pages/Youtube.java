@@ -13,6 +13,7 @@ import org.openqa.selenium.support.ui.Wait;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
@@ -90,14 +91,20 @@ public class Youtube extends TestBase {
         driver.get(driver.getCurrentUrl() + "/?view=0&sort=dd&flow=grid");
     }
 
-    public List<String> videoTitles() {
-        System.out.println(getvideoTitles());
+    public List<WebElement> getvideoTitlesWithInOneYear() {
+        List<WebElement> temp = new ArrayList<WebElement>();
         List<WebElement> list = getvideoTitles();
         for (WebElement ele : list)
         {
-            HashMap<String,String> hashMap = new HashMap<String,String>();
+            String text =  ele.getAttribute("aria-label");
+            System.out.println(text);
+            if(text.contains("weeks") && text.contains("months") && text.contains("1 year ago"))
+            {
+                System.out.println(ele.getText());
+                temp.add(ele);
+            }
         }
-        return null;
+        return temp;
     }
 
 
