@@ -1,0 +1,23 @@
+
+N
+java:S1197 "8Move the array designator from the variable to the type.(‘–µ¥
+\
+java:S1075""ARefactor your code to get this URI from a customizable parameter.( ñ¢÷øÿÿÿÿ
+S	java:S106,"9Replace this use of System.out or System.err by a logger.(é«±òúÿÿÿÿ
+S	java:S106."9Replace this use of System.out or System.err by a logger.(Õ§îşÿÿÿÿ
+S	java:S1060"9Replace this use of System.out or System.err by a logger.(ï®Í‚úÿÿÿÿ
+U	java:S8998";Do something with the "boolean" value returned by "delete".(§Ùœóıÿÿÿÿ
+i
+java:S40428"NUse "java.nio.file.Files#delete" here for better messages on error conditions.(§Ùœóıÿÿÿÿ
+\
+java:S1075?"ARefactor your code to get this URI from a customizable parameter.(²òÿğúÿÿÿÿ
+S	java:S106J"9Replace this use of System.out or System.err by a logger.(Õ§îşÿÿÿÿ
+U	java:S899S";Do something with the "boolean" value returned by "delete".(§Ùœóıÿÿÿÿ
+i
+java:S4042S"NUse "java.nio.file.Files#delete" here for better messages on error conditions.(§Ùœóıÿÿÿÿ
+C
+java:S1144N"(Remove this unused private "run" method.(Ùóö­üÿÿÿÿ
+>
+java:S1604%"(Make this anonymous inner class a lambda(õ’òÁ
+>
+java:S1604B"(Make this anonymous inner class a lambda(õ’òÁ

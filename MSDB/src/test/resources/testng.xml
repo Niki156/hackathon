@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="MySuite" >
+   <listeners>
+       <listener class-name="com.epam.framework.listeners.TestListener" />
+       <listener class-name="com.epam.reportportal.testng.ReportPortalTestNGListener" />
+   </listeners>
+    <test name="regression" parallel="classes">
+        <packages>
+        </packages>
+    </test>
+    <test name="smoke" parallel="classes">
+        <packages>
+            <package name="com.epam.hackathon.testScripts"></package>
+        </packages>
+    </test>
+
+</suite>

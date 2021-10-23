@@ -1,0 +1,10 @@
+
+v
+java:S3008
+"[Rename this field "TIME_OUT_SECONDS" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘ŽÐÂûÿÿÿÿ
+w
+java:S1104
+"\Make TIME_OUT_SECONDS a static final constant or non-public and provide accessors if needed.(‘ŽÐÂûÿÿÿÿ
+Q
+java:S1444
+"6Make this "public static TIME_OUT_SECONDS" field final(‘ŽÐÂûÿÿÿÿ
