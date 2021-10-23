@@ -11,6 +11,6 @@ public class SampleTest {
 
     @Test()
     public void anotherTest(){
-        System.out.println("Hackathon testing");
+        System.out.println("Hackathon");
     }
 }
