@@ -1,35 +1,37 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<configuration packages="com.epam.ta.reportportal.log4j.appender" status="WARN">
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration >
+
+  <Properties>
+        <Property name="basePath">logs</Property>
+    </Properties>
     <Appenders>
-        <Console name="ConsoleAppender">
-            <PatternLayout>
-                <Pattern>%d [%t] %-5level %logger{36} - %msg%n%throwable</Pattern>
-            </PatternLayout>
+    
+        <Console name="ConsoleAppender" target="SYSTEM_OUT">
+            <PatternLayout
+                    pattern="%d [%t] %-5level %logger{36} - %msg%n%throwable"/>
         </Console>
-        <File name="FileAppender" fileName="mylogs.log">
+        <RollingFile name="fileLogger" fileName="${basePath}/app-info.log" filePattern="${basePath}/app-info-%d{yyyy-MM-dd}.log">
             <PatternLayout>
-              <Pattern>%d [%t] %-5level %logger{36} - %msg%n%throwable</Pattern>
+                <pattern>[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n</pattern>
             </PatternLayout>
-        </File>
-        <ReportPortalLog4j2Appender name="ReportPortalAppender">
-            <PatternLayout>
-                <Pattern>%d [%t] %-5level %logger{36} - %msg%n%throwable</Pattern>
-            </PatternLayout>
-        </ReportPortalLog4j2Appender>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1" modulate="true" />
+            </Policies>
+        </RollingFile>
+        
     </Appenders>
     <Loggers>
-        <Root level="DEBUG" >
+    
+        <Root level="trace">
             <AppenderRef ref="ConsoleAppender"/>
-            <AppenderRef ref="ReportPortalAppender"/>
-            <AppenderRef ref="FileAppender"/>
+            <AppenderRef ref="fileLogger"/>
+            
         </Root>
-        <Logger name="com.epam.reportportal.service" level="WARN" additivity="false">
-            <AppenderRef ref="ConsoleAppender"/>
-            <AppenderRef ref="ReportPortalAppender"/>
+        <Logger name="fileAppender" level="trace" additivity="true">
+            <appender-ref ref="fileLogger" level="debug" />
+            <appender-ref ref="ConsoleAppender" level="debug" />
+            
         </Logger>
-        <Logger name="com.epam.reportportal.utils" level="WARN" additivity="false">
-            <AppenderRef ref="ConsoleAppender"/>
-            <AppenderRef ref="ReportPortalAppender"/>
-        </Logger>
+       
     </Loggers>
-</configuration>
+</Configuration>
