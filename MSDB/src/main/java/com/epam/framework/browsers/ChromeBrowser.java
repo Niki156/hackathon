@@ -1,8 +1,11 @@
 package com.epam.framework.browsers;
 
 import static com.epam.hackathon.constants.ConstantsSetUp.*;
+
+import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 public class ChromeBrowser {
 
@@ -16,7 +19,9 @@ public class ChromeBrowser {
     }
 
     public WebDriver getChromeBrowser() {
-        return new ChromeDriver();
+        ChromeOptions chromeOptions = new ChromeOptions();
+        chromeOptions.setPageLoadStrategy(PageLoadStrategy.NORMAL);
+        return new ChromeDriver(chromeOptions);
     }
 }
 

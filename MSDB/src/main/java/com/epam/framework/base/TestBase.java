@@ -5,6 +5,8 @@ import com.epam.framework.enums.DriverType;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+import java.util.concurrent.TimeUnit;
+
 import static com.epam.framework.utils.WaitUtilities.waitForElementToBeVisible;
 import static com.epam.hackathon.constants.ConstantsSetUp.TIME_OUT_SECONDS;
 
@@ -12,6 +14,7 @@ public class TestBase {
     protected WebDriver driver;
      public  WebDriver launchBrowser(String url,DriverType driverType){
         this.driver=BrowserConfiguration.getDriverInstance(driverType);
+        driver.manage().timeouts().pageLoadTimeout(100, TimeUnit.SECONDS);
         maximizeWindow(driver);
         openUrl(url,driver);
         return driver;
